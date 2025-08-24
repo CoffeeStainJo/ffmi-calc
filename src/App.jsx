@@ -30,9 +30,9 @@ const InputSlider = ({ icon, label, unit, value, onChange, min, max, step }) => 
 // --- Main Application Component ---
 export default function App() {
   // --- State Management ---
-  const [height, setHeight] = useState(175); // in cm
-  const [weight, setWeight] = useState(70); // in kg
-  const [bodyFat, setBodyFat] = useState(15); // in %
+  const [height, setHeight] = useState(180); // in cm
+  const [weight, setWeight] = useState(90); // in kg
+  const [bodyFat, setBodyFat] = useState(20); // in %
   const [gender, setGender] = useState('male');
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
@@ -208,7 +208,7 @@ export default function App() {
                     type="button"
                     onClick={() => setGender('male')}
                     aria-pressed={gender === 'male'}
-                    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${gender === 'male' ? 'bg-cyan-500 text-slate-900' : 'bg-transparent text-slate-300 hover:bg-slate-600 hover:text-white'}`}
+                    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${gender === 'male' ? 'bg-cyan-200 text-slate-900' : 'bg-transparent text-white hover:bg-slate-600/50'}`}
                   >
                     Male
                   </button>
@@ -216,7 +216,7 @@ export default function App() {
                     type="button"
                     onClick={() => setGender('female')}
                     aria-pressed={gender === 'female'}
-                    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${gender === 'female' ? 'bg-cyan-500 text-slate-900' : 'bg-transparent text-slate-300 hover:bg-slate-600 hover:text-white'}`}
+                    className={`px-4 py-2 text-sm font-semibold rounded-md transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${gender === 'female' ? 'bg-cyan-200 text-slate-900' : 'bg-transparent text-white hover:bg-slate-600/50'}`}
                   >
                     Female
                   </button>
